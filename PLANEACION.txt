@@ -1,0 +1,39 @@
+El proyecto será una aplicación de escritorio para la organización de los asegurados de mi mamá.
+
+La metodología de trabajo es Scrum.
+
+La arquitectura del proyecto es cliente-servidor
+
+El proyecto se divide en 3 partes:
+- Frontend: Electron.
+- Backend: El servidor estará hecho en Laravel.
+- Base de datos: MySQL, montada en el mismo servidor que el backend.
+
+## Requisitos
+- La información que se guarda de los asegurados será se nombre,
+  su carnet de identidad, fecha de nacimiento, sexo, domicilio, 
+  email, teléfono, celular, fecha en la que se hizo el seguro,
+  fecha en la que se vence el seguro, NIT, los requisitos del 
+  seguro y el monto del seguro.
+
+- Para conectar la aplicación con la base de datos se usará el 
+  ORM Eloquent, mientras que para la conexión con el servidor
+  se usará Axios.
+
+- La aplicación debe tener un login y rutas protegidas para 
+  que solo los usuarios registrados puedan acceder a la 
+  información.
+
+- La aplicación debe tener un CRUD para los asegurados.
+
+- La aplicación debe tener un CRUD para los requisitos.
+
+- La aplicación debe tener un CRUD para los seguros.
+
+- La aplicación debe tener un CRUD para los usuarios.
+
+- Solo se manejará un rol, que será usuario y administrador a
+  la vez.
+
+- El administrador podrá crear, editar y eliminar usuarios, 
+  asegurados, requisitos y seguros.
