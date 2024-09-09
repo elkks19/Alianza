@@ -1,2 +1,4 @@
 /templates/*_templ.go
 /templates/*_templ.txt
+/bin
+/bin/*
