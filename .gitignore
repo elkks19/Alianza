@@ -1,3 +1,4 @@
 /templates/*_templ.go
 /templates/*_templ.txt
 bin/
+node_modules/

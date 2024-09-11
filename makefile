@@ -12,12 +12,9 @@ TEMPLATES_DIR = templates
 TEMP_FILES += $(wildcard $(TEMPLATES_DIR)/*_templ.go)
 TEMP_FILES += $(wildcard $(TEMPLATES_DIR)/*_templ.txt)
 
-.PHONY: templates all
-# YOU CAN PUT TEMPLATES HERE IF YOU WANNA RELOAD THE BROWSER ON EVERY CHANGE
-# WARN: THIS LINE IS NOT NEEDED IF USING AIR, CAUSE IT'LL CREATE ANOTHER PROCESS IN THE BACKGROUND THAT WILL NOT CLOSE WHEN AIR STOPS
-# @./$(EXEC_FILE)
+.PHONY: templates all tailwind
 
-all: templates
+all: templates tailwind
 	@go build -o $(EXEC_FILE) $(MAIN_FILE)
 
 templates:
@@ -25,6 +22,14 @@ templates:
 	@rm -f $(TEMP_FILES)
 	@echo "Generating templates"
 	@templ generate
+
+
+TAILWIND_DIR = ./static/styles
+
+tailwind:
+	@echo "Generating tailwind css"
+	@npx tailwindcss -i $(TAILWIND_DIR)/input.css -o $(TAILWIND_DIR)/output.css
+
 
 # # the next line is used for getting a proxy so you can reload the page when saving a file, kinda like vite
 # serve:

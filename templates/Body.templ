@@ -1,5 +1,13 @@
 package templates
 
+import "sandra-alianza-app/templates/components"
+
 templ Body() {
-	<h1>hello world!</h1>
+	<h1 class="text-center font-sans text-4xl">
+		Hello World!
+	</h1>
+
+	<div class="grid grid-cols-3 grid-rows-3">
+		@components.Client()
+	</div>
 }
