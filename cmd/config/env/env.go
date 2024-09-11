@@ -25,3 +25,4 @@ func Get(envName string) string {
 
 	return envVariable
 }
+
