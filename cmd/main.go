@@ -18,6 +18,7 @@ func main(){
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "", templates.Index())
 	})
+
     r.Static("/styles", "./static/styles/")
 
 
